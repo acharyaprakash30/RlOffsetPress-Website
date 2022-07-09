@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     padding: 50px 180px;
-    object-fit: contain;
 }
 .bc-first{
     width: 50%;
@@ -35,12 +34,15 @@
    height: 50px;
    border-radius: 25px;
 }
+.bc-btn:hover{
+    background-color: black;
+}
 
 @media screen and (max-width:1008px){
     .bc{
         display: flex;
         flex-direction: column;
-        padding: 50px;
+        padding: 40px;
     }
     .bc-first{
         width: 100%;
