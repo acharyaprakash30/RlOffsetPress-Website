@@ -1,0 +1,118 @@
+.bc{
+    display: flex;
+    width: 100%;
+    padding: 50px 180px;
+    object-fit: contain;
+}
+.bc-first{
+    width: 50%;
+}
+.bc-second{
+    width: 50%;
+}
+.bc-h3{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: #EB088D;
+}
+.bc-h1{
+    font-size: 35px;
+    font-weight: bolder;
+}
+.bc-p{
+    font-size: 14px;
+    text-align: justify;
+}
+.bc-midgap{
+    width: 50px;
+}
+.bc-btn{
+   color: white;
+   background-color: #EB088D;
+   font-weight: bold; 
+   width: 180px;
+   height: 50px;
+   border-radius: 25px;
+}
+
+@media screen and (max-width:1008px){
+    .bc{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+    }
+    .bc-first{
+        width: 100%;
+    }
+    .bc-second{
+        width: 100%;
+        margin-top: 50px 100px;
+    }
+    .bc-h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-style: italic;
+        color: #EB088D;
+    }
+    .bc-h1{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .bc-p{
+        font-size: 13px;
+        text-align: justify;
+    }
+    .bc-btn{
+        color: white;
+        background-color: #EB088D;
+        font-weight: bold; 
+        width: 160px;
+        height: 40px;
+        border-radius: 25px;
+     }
+     .bc-img{
+        padding-top: 50px;
+     }
+}
+@media (min-width:1008px) and (max-width:1279px){
+    .bc{
+        display: flex;
+        width: 100%;
+        padding: 50px 80px;
+    }
+    .bc-first{
+        width: 50%;
+    }
+    .bc-second{
+        width: 50%;
+    }
+    .bc-h3{
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+        color: #EB088D;
+    }
+    .bc-h1{
+        font-size: 35px;
+        font-weight: bolder;
+    }
+    .bc-p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    .bc-midgap{
+        width: 50px;
+    }
+    .bc-btn{
+       color: white;
+       background-color: #EB088D;
+       font-weight: bold; 
+       width: 180px;
+       height: 50px;
+       border-radius: 25px;
+    }
+    .bc-img{
+        object-fit:cover;
+    }
+}
