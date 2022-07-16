@@ -31,7 +31,8 @@
 .navbar-links{
     display: flex;
     align-items: center;
-    font-size: 14px;    
+    font-size: 14px;   
+    letter-spacing: 1px; 
 }
 .navbar-address{
     display: flex;
@@ -46,9 +47,17 @@
     position:relative;
     display: flex;
 }
-.navbar-li-add{
-    padding: 10px;
+.navbar-add{
+    padding: 10px 0;
     display: flex;
+}
+.navbar-add-mail{
+    padding: 10px 0;
+    margin-right: 15px;
+    display: flex;
+}
+.navbar-add-mail:hover{
+    cursor: pointer;
 }
 .navbar-li::after{
     content: '';
@@ -72,14 +81,24 @@
 .navbar-sub{
     display: none;
 }
-.navbar-subs{
+.navbar-sub-service{
     display: block;
-    margin-top: 185px;
+    margin-top: 250px;
     margin-left: -130px;
     width: 130px;
     z-index: 2;
-    background-color: #ee4caa;
-    /* padding: 3px 0; */
+    background-color:#EF018D;
+    padding: 10px 0;
+    text-align: center;
+}
+.navbar-sub-feature{
+    display: block;
+    margin-top: 170px;
+    margin-left: -130px;
+    width: 130px;
+    z-index: 2;
+    background-color:#EF018D;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -88,7 +107,8 @@
     width: 100%;
 }
 .navbar-sub-li:hover{
-    background-color: #EF018D; 
+    /* background-color:#ee4caa; */
+    color: white;
     cursor: pointer;
 }
 .color-icon{
