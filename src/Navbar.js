@@ -35,7 +35,7 @@ const Navbar = () => {
     <Router>
     <div className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
       <div className='navbar-logo'>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/>
+        <Link to="/"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/></Link>
       </div>
       <ul className='navbar-links'>
       <Link to='/'><li className='navbar-li'>Home</li></Link>

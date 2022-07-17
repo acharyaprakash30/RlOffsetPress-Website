@@ -28,6 +28,9 @@
     width: 80px;
     object-fit: contain;
 }
+.navbar-logo:hover{
+    cursor: pointer;
+}
 .navbar-links{
     display: flex;
     align-items: center;
