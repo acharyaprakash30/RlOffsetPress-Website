@@ -1,0 +1,42 @@
+.footbar{
+    height: 100px;
+    width: 100%;
+    background-color: #032938;
+    padding: 40px 20px;
+    display: flex;
+}
+.footbar-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.553);
+    font-size: 14px;
+    margin-left: 400px;
+    letter-spacing: 1px;
+}
+.footbar-li{
+    margin: 0 20px;
+}
+.footbar-li:hover{
+    cursor: pointer;
+    color: white;
+}
+.footbar-icons{
+    margin: 0 10px;
+    color: white;
+}
+.footbar-icons:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.553);
+}
+
+.footbar-social{
+    display: flex;
+    margin-left: 100px;
+}
+.footbar-copyright{
+    display: flex;
+    color: white;
+    margin-left: 50px;
+    font-size: 14px;
+}
