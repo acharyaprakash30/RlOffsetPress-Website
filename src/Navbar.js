@@ -1,17 +1,26 @@
 import React from 'react'
 import './Navbar.css'
 import { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
+import { 
+  Link,
+  Route,
+  Routes,
+  BrowserRouter as Router
+} from "react-router-dom";
+import About from "./Navlinks/About";
+import Blogs from "./Navlinks/Blogs";
+import Contacts from "./Navlinks/Contacts";
+import Home from './Navlinks/Home';
 
 
 const Navbar = () => {
-  const[featurelist, setFeatureList] = useState(false);
+  // const[featurelist, setFeatureList] = useState(false);
   const[servicelist, setServiceList] = useState(false);
   const[barscroll,setBarscroll] = useState(false);
 
   useEffect(()=>{
     window.addEventListener("scroll", ()=>{
-       if (window.scrollY > 70) {
+       if (window.scrollY > 0) {
         setBarscroll(true);
        } 
         else setBarscroll(false);
@@ -23,19 +32,20 @@ const Navbar = () => {
 
   return (
     <>
+    <Router>
     <div className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
       <div className='navbar-logo'>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/>
       </div>
       <ul className='navbar-links'>
       <Link to='/'><li className='navbar-li'>Home</li></Link>
-      <li className='navbar-li pr-1' onClick={()=>setFeatureList(!featurelist)}>Features<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+      {/* <li className='navbar-li pr-1' onClick={()=>setFeatureList(!featurelist)}>Features<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg></li>
         <ul className={featurelist?'navbar-sub-feature':'navbar-sub'}>
           <li className='navbar-sub-li'>feature 1</li>
           <li className='navbar-sub-li'>feature 2</li>
-        </ul>
+        </ul> */}
         <Link to='/about'><li className='navbar-li'>About</li></Link>
         <li className='navbar-li pr-1'  onClick={()=>setServiceList(!servicelist)}>Services<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -46,8 +56,8 @@ const Navbar = () => {
           <li className='navbar-sub-li'>Service 3</li>
           <li className='navbar-sub-li'>Service 4</li>
         </ul>
-        <Link to='blogs'><li className='navbar-li'>Blogs</li></Link>
-        <Link to='contacts'><li className='navbar-li'>Contacts</li></Link>
+        <Link to='/blogs'><li className='navbar-li'>Blogs</li></Link>
+        <Link to='/contacts'><li className='navbar-li'>Contacts</li></Link>
       </ul>
       <ul className='navbar-address'>
         <li className='navbar-add-mail'><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 mr-1 color-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -58,6 +68,13 @@ const Navbar = () => {
         </svg>071-123456</li>
       </ul>
     </div>
+    <Routes>
+      <Route exact path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/blogs' element={<Blogs/>}/>
+      <Route path='/contacts' element={<Contacts/>}/>
+    </Routes>
+    </Router>
     </>
   )
 }
