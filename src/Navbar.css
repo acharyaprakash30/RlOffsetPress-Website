@@ -16,7 +16,7 @@
     display: block;
     z-index: 2;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     justify-content:space-between;
     /* background-color: #F0008B; */
     /* background-color: #ee4caa; */

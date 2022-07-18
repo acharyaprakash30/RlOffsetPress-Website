@@ -1,0 +1,13 @@
+.navbutton{
+    left: 1300px;
+    position: fixed;
+    z-index: 2;
+    top: 600px;
+    background-color:#FFEF01;
+    color: white;
+    box-shadow: 1px 2px 8px black;
+    border-radius: 50%;
+}
+.navbarbutton-off{
+    display: none;
+}

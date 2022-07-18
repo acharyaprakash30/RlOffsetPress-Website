@@ -3,15 +3,17 @@ import ImageCarousel from '../ImageCarousel'
 import BelowCarousel from '../BelowCarousel'
 import Services from '../Services'
 import Bannar from '../Bannar'
+import Navbutton from '../Navbutton'
 
 const Home = () => {
   return (
-    <div>
+    <>
         <Bannar/>
+        <Navbutton/>
         <BelowCarousel/>
         <ImageCarousel/>
         <Services/>
-    </div>
+    </>
   )
 }
 

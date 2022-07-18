@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
     <Router>
-    <div className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
+    <div id="top" className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
       <div className='navbar-logo'>
         <Link to="/"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/></Link>
       </div>
