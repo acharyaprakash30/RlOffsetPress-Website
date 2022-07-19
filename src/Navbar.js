@@ -38,11 +38,11 @@ const Navbar = () => {
   return (
     <>
     <Router>
-    <div id="top" className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
+    <div id="top" onClick={()=>showMenu(!menu)} className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
       <div className='navbar-logo'>
         <NavLink to="/"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/></NavLink>
       </div>
-      <ul className='navbar-links'>
+      <ul className={menu? 'navbar-links' : 'menu-items'}>
       <NavLink to='/'><li className='navbar-li'>Home</li></NavLink>
       {/* <li className='navbar-li pr-1' onClick={()=>setFeatureList(!featurelist)}>Features<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -73,7 +73,7 @@ const Navbar = () => {
         </svg>071-123456</li>
       </ul>
       {
-        menu?<FaBars onClick={()=>showMenu(!menu)} className='navbar-menu' size={26}/>
+        menu? <FaBars onClick={()=>showMenu(!menu)} className='navbar-menu' size={26}/>
         : <VscChromeClose onClick={()=>showMenu(!menu)} className='navbar-menu' size={26} />
       }
 
