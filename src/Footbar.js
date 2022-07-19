@@ -7,6 +7,7 @@ import { FaRegCopyright } from 'react-icons/fa'
 
 const Footbar = () => {
   return (
+    <>
     <div className='footbar'>
         <ul className='footbar-links'>
             <li className='footbar-li'>Home</li>
@@ -16,12 +17,13 @@ const Footbar = () => {
             <li className='footbar-li'>Contacts</li>
         </ul>
         <ul className='footbar-social'>
-            <li className='footbar-icons'><FaFacebook size={18}/></li>
-            <li className='footbar-icons'><FaTwitter size={18}/></li>
-            <li className='footbar-icons'><FaInstagram size={18}/></li>
+            <a href='https://www.facebook.com/BillGates'><li className='footbar-icons'><FaFacebook size={18}/></li></a>
+            <a href='https://twitter.com/BillGates'><li className='footbar-icons'><FaTwitter size={18}/></li></a>
+            <a href='https://www.instagram.com/thisisbillgates/?hl=en'><li className='footbar-icons'><FaInstagram size={18}/></li></a>
             <li className='footbar-copyright'><FaRegCopyright className='mt-1.5 mr-1.5' size={12}/><p>2022 BijayNeupane</p></li>
         </ul>
     </div>
+    </>
   )
 }
 
