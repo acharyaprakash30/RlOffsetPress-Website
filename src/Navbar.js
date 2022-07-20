@@ -38,12 +38,12 @@ const Navbar = () => {
   return (
     <>
     <Router>
-    <div id="top" onClick={()=>showMenu(!menu)} className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
+    <div id="top" className={`navbar ${barscroll ? 'navbar-color' : ''}`}>
       <div className='navbar-logo'>
-        <NavLink to="/"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/></NavLink>
+        <NavLink to="/"><img onClick={()=>showMenu(true)} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWVDSyMt7RiebfV25ExNLg_EUlRn3hHjsBNQ&usqp=CAU' alt=''/></NavLink>
       </div>
       <ul className={menu? 'navbar-links' : 'menu-items'}>
-      <NavLink to='/'><li className='navbar-li'>Home</li></NavLink>
+      <NavLink to='/'><li onClick={()=>showMenu(true)} className='navbar-li'>Home</li></NavLink>
       {/* <li className='navbar-li pr-1' onClick={()=>setFeatureList(!featurelist)}>Features<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg></li>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <li className='navbar-sub-li'>feature 1</li>
           <li className='navbar-sub-li'>feature 2</li>
         </ul> */}
-        <NavLink to='/about'><li className='navbar-li'>About</li></NavLink>
+        <NavLink to='/about'><li onClick={()=>showMenu(true)} className='navbar-li'>About</li></NavLink>
         <li className='navbar-li pr-1'  onClick={()=>setServiceList(!servicelist)}>Services<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg></li>
@@ -61,8 +61,8 @@ const Navbar = () => {
           <li className='navbar-sub-li'>Service 3</li>
           <li className='navbar-sub-li'>Service 4</li>
         </ul>
-        <NavLink to='/blogs'><li className='navbar-li'>Blogs</li></NavLink>
-        <NavLink to='/contacts'><li className='navbar-li'>Contacts</li></NavLink>
+        <NavLink to='/blogs'><li onClick={()=>showMenu(true)} className='navbar-li'>Blogs</li></NavLink>
+        <NavLink to='/contacts'><li onClick={()=>showMenu(true)} className='navbar-li'>Contacts</li></NavLink>
       </ul>
       <ul className='navbar-address'>
         <a href='mailto:rloffsetpress@gmail.com'><li className='navbar-add-mail'><svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 mr-1 color-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -74,7 +74,7 @@ const Navbar = () => {
       </ul>
       {
         menu? <FaBars onClick={()=>showMenu(!menu)} className='navbar-menu' size={26}/>
-        : <VscChromeClose onClick={()=>showMenu(!menu)} className='navbar-menu' size={26} />
+        : <VscChromeClose onClick={()=>{showMenu(!menu);setServiceList(false)}} className='navbar-menu' size={26} />
       }
 
       {/* <Drawer
